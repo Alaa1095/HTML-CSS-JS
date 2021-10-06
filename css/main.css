@@ -1,0 +1,207 @@
+:root{
+--main-color: #20bd44;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+/* start landing */
+.landing{
+background-image: url('../images/Landing1.jpg');
+background-size: cover;
+min-height: 100vh;
+position: relative;
+transition: 3s;
+}
+.landing .overlay{
+position: absolute;
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+background-color: #00000030;
+z-index: 1;
+}
+.landing .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+.landing .header > i{
+    font-size: 50px;
+    color: var(--main-color);
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.landing .header > P{
+    color: wheat;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 90px;
+    top: 25%;
+    transform: translateY(-50%);
+}
+.landing .header .ul{
+    display: flex;
+    color: white;
+    padding-right: 15px;
+}
+.landing .header .ul li{
+    list-style: none;
+    padding-right: 40px;
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.landing .header .ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.landing .header .ul li a:hover , 
+.landing .header .ul li a.active {
+    color: var(--main-color) ;
+    transition: .3s;
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 5px;
+}
+.landing .main-content{
+    padding: 100px;
+    color: white;
+    text-align: left;
+    position: relative;
+    z-index:2;
+}
+.landing .main-content h4{
+    font-size: 60px;
+    margin: 0 0 15px;
+}
+.landing .main-content span{
+color: var(--main-color);
+}
+.landing .main-content p{
+    letter-spacing: 3px;
+    font-size: 15px;
+    margin: auto 5px 0;
+}
+/* End landing */
+
+/* Start Settings */
+.settings{
+    position: fixed;
+    height: 0px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    transition: .4s;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.settings.open{
+    height: 120px;
+    align-items: center;
+
+}
+/* .settings.open .settings-overlay{
+    width: 100%;
+    height: 140px;
+    background-color: var(--main-color);
+    opacity: .5;
+} */
+.settings > .icon-container{
+    position: absolute;
+    font-size: 15px;
+    left: 50%;
+    top: -39px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    opacity: .5;
+    transform: translate(-50%);
+}
+.settings > .icon-container i{
+    padding: 12px;
+}
+
+.settings h3{
+    text-align: center;
+    width: 215px;
+    position: absolute;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    top: 0;
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, 5px);
+}
+.settings .color-option{
+    text-align: center;
+    height: 55px;
+    width: 195px;
+    cursor: pointer;
+    background-color: #7777;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.settings .color-option:hover{
+    background-color: var(--main-color);
+    transition: .8s;
+}
+.settings .color-option h4{
+    margin: unset;
+
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+.settings .color-option > input{
+    background-color: transparent;
+    display: inline-block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.settings .randomBackground{
+    display: flex;
+    flex-direction: column;
+    background-color: #7777;
+    height: 55px;
+}
+.settings .randomBackground h4{
+    margin: auto 15px;
+    color: white;
+}
+.settings .randomBackground .box{
+    text-align: center;
+    display: flex;
+    color: white;
+    border: .5px solid var(--main-color);
+    cursor: pointer;
+}
+.settings .randomBackground .box span{
+flex:1;
+}
+.settings .randomBackground .box span.active{
+    background-color: var(--main-color);
+}
+.settings .randomBackground .box span:hover{
+    background-color: var(--main-color);
+    transition: .3s;
+    opacity: .5;
+}
+/* End Settings */
